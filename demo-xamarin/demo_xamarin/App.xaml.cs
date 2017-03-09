@@ -13,7 +13,7 @@ namespace demo_xamarin
         {
             InitializeComponent();
 
-            MainPage = new demo_xamarin.MainPage();
+            MainPage = new demo_xamarin.Views.listarAnimais();
         }
 
         protected override void OnStart()

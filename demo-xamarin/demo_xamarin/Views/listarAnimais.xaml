@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="demo_xamarin.Views.listarAnimais">
+    <ListView x:Name="ListAnimais" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <StackLayout Spacing="3" Orientation="Vertical">
+                            <StackLayout Spacing="3" Orientation="Horizontal">
+                                <Image Source="{Binding Imagem}"/>
+                            </StackLayout>
+                            <StackLayout Spacing="3" Orientation="Horizontal">
+                                <Label Text="{Binding AnimalID}" FontSize="24"></Label>
+                                <Label Text="{Binding Nome}" FontSize="24"></Label>
+                                <Label Text="{Binding Data}" FontSize="24"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
