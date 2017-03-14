@@ -32,6 +32,7 @@ namespace demo_xamarin.Views
             {
                 item.Imagem = "http://adamastor.ipt.pt/Azulejos2-mobile/" + item.Imagem;
             }
+            ListAnimais.IsRefreshing = false;
         }
     }
 }

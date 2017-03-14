@@ -1,11 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:demo_xamarin"
+             xmlns:local="clr-namespace:demo_xamarin.Views"
              x:Class="demo_xamarin.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <MasterDetailPage.Master>
+        <ContentPage Title="MenuTitle">
+            <StackLayout Orientation="Vertical">
 
-</ContentPage>
+                <StackLayout BackgroundColor="#2093EE"
+                     HeightRequest="55">
+                    <Label Text="Menu"
+                        FontSize="20"
+                        VerticalOptions="CenterAndExpand"
+                        TextColor="White"
+                        HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <ListView x:Name="menuDrawer" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout VerticalOptions="FillAndExpand"
+                                     Orientation="Horizontal"
+                                     Padding="20,10,20,10"
+                                     Spacing="20">
+                                        <Button Text="{Binding Title}" CommandParameter="{Binding Type}" 
+                                                Clicked="menuItemClick" HorizontalOptions="FillAndExpand"></Button>
+                                        <!--<Label Text="{Binding Title}" FontSize="24"></Label>-->
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+</MasterDetailPage>

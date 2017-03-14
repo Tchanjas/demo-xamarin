@@ -22,5 +22,18 @@ namespace demo_xamarin.Services
             var animaisItems = JsonConvert.DeserializeObject<List<Animal>>(response);
             return animaisItems;
         }
+
+        public async Task PostAnimalAsync(Object animal)
+        {
+            var uri = new Uri(string.Format(ApiUrl));
+
+            var json = JsonConvert.SerializeObject(animal);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            HttpResponseMessage response = null;
+            response = await client.PostAsync(uri, content);
+
+        }
+
     }
 }

@@ -9,11 +9,11 @@ namespace demo_xamarin
 {
     public partial class App : Application
     {
+        public Page currentDetail;
         public App()
         {
             InitializeComponent();
-
-            MainPage = new demo_xamarin.Views.listarAnimais();
+            MainPage = new demo_xamarin.MainPage();
         }
 
         protected override void OnStart()
