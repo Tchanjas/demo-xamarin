@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="demo_xamarin.Views.listarAnimais"
              Title="Listar Animais">
-    <ListView x:Name="ListAnimais" HasUnevenRows="True" IsPullToRefreshEnabled="true" Refreshing="RefreshData">
+    <ListView x:Name="ListAnimais" HasUnevenRows="True" IsPullToRefreshEnabled="true" Refreshing="RefreshData" ItemTapped="mostrarDetalhes">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>

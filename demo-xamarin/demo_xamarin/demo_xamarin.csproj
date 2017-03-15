@@ -48,6 +48,9 @@
     <Compile Include="Views\adicionarAnimal.xaml.cs">
       <DependentUpon>adicionarAnimal.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\detalhesAnimal.xaml.cs">
+      <DependentUpon>detalhesAnimal.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\listarAnimais.xaml.cs">
       <DependentUpon>listarAnimais.xaml</DependentUpon>
     </Compile>
@@ -103,6 +106,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\adicionarAnimal.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\detalhesAnimal.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

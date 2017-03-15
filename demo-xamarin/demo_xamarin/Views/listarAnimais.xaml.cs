@@ -34,5 +34,14 @@ namespace demo_xamarin.Views
             }
             ListAnimais.IsRefreshing = false;
         }
+
+        void mostrarDetalhes(object sender, ItemTappedEventArgs e)
+        {
+            if (e.Item == null)
+            {
+                return;
+            }
+            Navigation.PushAsync(new NavigationPage(new detalhesAnimal()));
+        }
     }
 }

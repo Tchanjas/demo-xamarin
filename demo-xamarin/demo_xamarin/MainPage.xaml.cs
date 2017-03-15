@@ -21,13 +21,12 @@ namespace demo_xamarin
             Detail = new NavigationPage(new listarAnimais());
         }
 
-        void menuItemClick(object sender, EventArgs e)
+        void menuItemClick(object sender, ItemTappedEventArgs e)
         {
             this.IsPresented = false;
-            var pageType = ((Button)sender).CommandParameter.ToString();
-            if (pageType == "add") { Detail = new NavigationPage(new adicionarAnimal()); }
-            else if (pageType == "list") { Detail = new NavigationPage(new listarAnimais()); }
+            var pageType = (Item)e.Item;
+            if (pageType.Type == "add") { Detail = new NavigationPage(new adicionarAnimal()); }
+            else if (pageType.Type == "list") { Detail = new NavigationPage(new listarAnimais()); }
         }
-
     }
 }
