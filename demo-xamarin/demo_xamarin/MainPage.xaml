@@ -26,8 +26,6 @@
                                      Orientation="Horizontal"
                                      Padding="20,10,20,10"
                                      Spacing="20">
-                                        <!--<Button Text="{Binding Title}" CommandParameter="{Binding Type}"--> 
-                                                <!--Clicked="menuItemClick" HorizontalOptions="FillAndExpand"></Button>-->
                                         <Label Text="{Binding Title}" FontSize="24"></Label>
                                     </StackLayout>
                                 </ViewCell.View>

@@ -41,7 +41,7 @@ namespace demo_xamarin.Views
             {
                 return;
             }
-            Navigation.PushAsync(new NavigationPage(new detalhesAnimal()));
+            Navigation.PushAsync(new detalhesAnimal());
         }
     }
 }
