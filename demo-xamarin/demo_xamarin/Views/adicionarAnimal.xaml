@@ -4,9 +4,13 @@
              x:Class="demo_xamarin.Views.adicionarAnimal"
              Title="Adicionar Animal">
     <StackLayout x:Name="addAnimais">
-        <Entry Placeholder="Inteiro"></Entry>
-        <Entry Placeholder="String"></Entry>
-        <DatePicker></DatePicker>
+        <Entry x:Name="AnimalID" Placeholder="AnimalID"></Entry>
+        <Entry x:Name="Nome" Placeholder="Nome"></Entry>
+        <Entry x:Name="Especie" Placeholder="Especie"></Entry>
+        <Entry x:Name="Raca" Placeholder="Raca"></Entry>
+        <Entry x:Name="Peso" Placeholder="Peso"></Entry>
+        <Entry x:Name="Altura" Placeholder="Altura"></Entry>
+        
         <Button Text="Enviar" Clicked="addAnimal"></Button>
     </StackLayout>
 </ContentPage>

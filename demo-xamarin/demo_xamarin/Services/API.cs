@@ -23,7 +23,7 @@ namespace demo_xamarin.Services
             return animaisItems;
         }
 
-        public async Task PostAnimalAsync(Object animal)
+        public async Task PostAnimalAsync(Animal animal)
         {
             var uri = new Uri(string.Format(ApiUrl));
 
@@ -32,7 +32,6 @@ namespace demo_xamarin.Services
 
             HttpResponseMessage response = null;
             response = await client.PostAsync(uri, content);
-
         }
 
     }
