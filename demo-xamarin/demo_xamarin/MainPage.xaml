@@ -16,7 +16,7 @@
                         TextColor="White"
                         HorizontalOptions="Center"/>
                 </StackLayout>
-
+                
                 <ListView x:Name="menuDrawer" HasUnevenRows="True" ItemTapped="menuItemClick">
                     <ListView.ItemTemplate>
                         <DataTemplate>
