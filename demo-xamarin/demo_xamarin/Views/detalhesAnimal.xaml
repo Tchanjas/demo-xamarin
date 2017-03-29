@@ -3,4 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="demo_xamarin.Views.detalhesAnimal"
              Title="Detalhes">
+    <ListView x:Name="detailsAnimal" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <StackLayout Spacing="3" Orientation="Vertical">
+                            <StackLayout Spacing="3" Orientation="Horizontal" Padding="10">
+                                <Image Source="{Binding Imagem}"/>
+                            </StackLayout>
+                            <StackLayout Spacing="3" Orientation="Horizontal">
+                                <Label Text="Nome: " FontSize="24"></Label>
+                                <Label Text="{Binding Nome}" FontSize="24"></Label>
+                            </StackLayout>
+                            <StackLayout Spacing="3" Orientation="Horizontal">
+                                <Label Text="Especie: " FontSize="24"></Label>
+                                <Label Text="{Binding Especie}" FontSize="24"></Label>
+                            </StackLayout>
+                            <StackLayout Spacing="3" Orientation="Horizontal">
+                                <Label Text="Raça: " FontSize="24"></Label>
+                                <Label Text="{Binding Raca}" FontSize="24"></Label>
+                            </StackLayout>
+                            <StackLayout Spacing="3" Orientation="Horizontal">
+                                <Label Text="Peso: " FontSize="24"></Label>
+                                <Label Text="{Binding Peso}" FontSize="24"></Label>
+                                <Label Text="kg" FontSize="24"></Label>
+                            </StackLayout>
+                            <StackLayout Spacing="3" Orientation="Horizontal">
+                                <Label Text="Data: " FontSize="24"></Label>
+                                <Label Text="{Binding Data}" FontSize="24"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>

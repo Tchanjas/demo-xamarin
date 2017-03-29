@@ -35,13 +35,14 @@ namespace demo_xamarin.Views
             ListAnimais.IsRefreshing = false;
         }
 
-        void mostrarDetalhes(object sender, ItemTappedEventArgs e)
+        void buscarDetalhes(object sender, ItemTappedEventArgs e)
         {
             if (e.Item == null)
             {
                 return;
             }
-            Navigation.PushAsync(new detalhesAnimal());
+            var animalItem = (Animal)e.Item;
+            Navigation.PushAsync(new detalhesAnimal(animalItem.AnimalID));
         }
     }
 }

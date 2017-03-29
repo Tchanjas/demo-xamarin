@@ -23,6 +23,13 @@ namespace demo_xamarin.Services
             return animaisItems;
         }
 
+        public async Task<Animal> GetAnimalAsync(string id)
+        {
+            var response = await client.GetStringAsync(ApiUrl+ "/" + id);
+            var animalItem = JsonConvert.DeserializeObject<Animal>(response);
+            return animalItem;
+        }
+
         public async Task PostAnimalAsync(Animal animal)
         {
             var uri = new Uri(string.Format(ApiUrl));
