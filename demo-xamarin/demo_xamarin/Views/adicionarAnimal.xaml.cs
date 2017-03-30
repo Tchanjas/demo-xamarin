@@ -24,7 +24,6 @@ namespace demo_xamarin.Views
         async void addAnimal(object sender, EventArgs e)
         {
             Animal animal = new Animal();
-            animal.AnimalID = Convert.ToInt32(this.AnimalID.Text);
             animal.Nome = this.Nome.Text;
             animal.Especie = this.Especie.Text;
             animal.Raca = this.Raca.Text;
@@ -35,7 +34,6 @@ namespace demo_xamarin.Views
             animal.Data = "2015-05-15T13:45:00";
 
             animal.DonosFK = 1;
-
             await apiService.PostAnimalAsync(animal);
         }
     }
