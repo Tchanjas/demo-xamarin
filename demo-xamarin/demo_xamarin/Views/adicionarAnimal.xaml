@@ -10,6 +10,9 @@
         <Entry x:Name="Peso" Placeholder="Peso"></Entry>
         <Entry x:Name="Altura" Placeholder="Altura"></Entry>
 
+        <DatePicker x:Name="Data"></DatePicker>
+        <TimePicker x:Name="Horas"></TimePicker>
+
         <Button x:Name="takePhoto" Text="Take Photo"/>
         <Button x:Name="pickPhoto" Text="Pick Photo"/>
 
