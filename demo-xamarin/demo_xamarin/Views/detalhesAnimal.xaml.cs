@@ -32,7 +32,7 @@ namespace demo_xamarin.Views
             items.Add(itemAnimal);
             foreach (var item in items)
             {
-                item.Imagem = "http://adamastor.ipt.pt/Azulejos2-mobile/" + item.Imagem;
+                item.Imagem = "http://adamastor.ipt.pt/Azulejos2-mobile/Imagens/" + item.Imagem;
             }
             detailsAnimal.ItemsSource = items.ToList();
         }
